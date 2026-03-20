@@ -7,7 +7,7 @@ const camera1 = new THREE.PerspectiveCamera(65, window.innerWidth / window.inner
 camera1.position.set(0, 30, 0);
 
 const scene1 = new THREE.Scene();
-const backgroundTexture1 = new THREE.TextureLoader().load('../img/FondoObjetos.avif');
+const backgroundTexture1 = new THREE.TextureLoader().load('/img/FondoObjetos.avif');
 scene1.background = backgroundTexture1;
 
 const ambientLight1 = new THREE.AmbientLight(0xffffff, 1);
@@ -19,7 +19,7 @@ scene1.add(directionalLight1);
 
 let procesador;
 const loader1 = new GLTFLoader();
-loader1.load('../objetos/Ryzen4001.glb', function (gltf) {
+loader1.load('/objetos/Ryzen4001.glb', function (gltf) {
     procesador = gltf.scene;
 
     procesador.traverse((child) => {
@@ -64,7 +64,7 @@ const camera2 = new THREE.PerspectiveCamera(65, window.innerWidth / window.inner
 camera2.position.set(0, 6, 20);
 
 const scene2 = new THREE.Scene();
-const backgroundTexture2 = new THREE.TextureLoader().load('../img/FondoObjetos.avif');
+const backgroundTexture2 = new THREE.TextureLoader().load('/img/FondoObjetos.avif');
 scene2.background = backgroundTexture2;
 
 const ambientLight2 = new THREE.AmbientLight(0xffffff, 1);
@@ -76,7 +76,7 @@ scene2.add(directionalLight2);
 
 let ram;
 const loader2 = new GLTFLoader();
-loader2.load('../objetos/ram.glb', function (gltf) {
+loader2.load('/objetos/ram.glb', function (gltf) {
     ram = gltf.scene;
 
     ram.traverse((child) => {
@@ -121,7 +121,7 @@ const camera3 = new THREE.PerspectiveCamera(65, window.innerWidth / window.inner
 camera3.position.set(0, 5, 20);
 
 const scene3 = new THREE.Scene();
-const backgroundTexture3 = new THREE.TextureLoader().load('../img/FondoObjetos.avif');
+const backgroundTexture3 = new THREE.TextureLoader().load('/img/FondoObjetos.avif');
 scene3.background = backgroundTexture3;
 
 const ambientLight3 = new THREE.AmbientLight(0xffffff, 1);
@@ -133,7 +133,7 @@ scene3.add(directionalLight3);
 
 let fuente;
 const loader3 = new GLTFLoader();
-loader3.load('../objetos/CorsairCV750.glb', function (gltf) {
+loader3.load('/objetos/CorsairCV750.glb', function (gltf) {
     fuente = gltf.scene;
 
     fuente.traverse((child) => {
@@ -178,7 +178,7 @@ const camera4 = new THREE.PerspectiveCamera(65, window.innerWidth / window.inner
 camera4.position.set(0, 5, 20);
 
 const scene4 = new THREE.Scene();
-const backgroundTexture4 = new THREE.TextureLoader().load('../img/FondoObjetos.avif');
+const backgroundTexture4 = new THREE.TextureLoader().load('/img/FondoObjetos.avif');
 scene4.background = backgroundTexture4;
 
 const ambientLight4 = new THREE.AmbientLight(0xffffff, 1);
@@ -190,7 +190,7 @@ scene4.add(directionalLight4);
 
 let almacenamiento;
 const loader4 = new GLTFLoader();
-loader4.load('../objetos/Almacenamiento1.glb', function (gltf) {
+loader4.load('/objetos/Almacenamiento1.glb', function (gltf) {
     almacenamiento = gltf.scene;
 
     almacenamiento.traverse((child) => {
@@ -235,7 +235,7 @@ const camera5 = new THREE.PerspectiveCamera(65, window.innerWidth / window.inner
 camera5.position.set(0, 5, 20);
 
 const scene5 = new THREE.Scene();
-const backgroundTexture5 = new THREE.TextureLoader().load('../img/FondoObjetos.avif');
+const backgroundTexture5 = new THREE.TextureLoader().load('/img/FondoObjetos.avif');
 scene5.background = backgroundTexture5;
 
 const ambientLight5 = new THREE.AmbientLight(0xffffff, 1);
@@ -248,7 +248,7 @@ scene5.add(directionalLight5);
 let grafica;
 const loader5 = new GLTFLoader();
 
-loader5.load('../objetos/Grafica.glb', function (gltf) {
+loader5.load('/objetos/Grafica.glb', function (gltf) {
     grafica = gltf.scene;
 
     grafica.traverse((child) => {

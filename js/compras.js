@@ -1,10 +1,10 @@
 // Datos de ejemplo para los productos
 const products = [
-    { id: 1, idObjeto: "containerProcesador", name: "Procesador Intel i7", price: 300, image: "img/procesador.png", description: "Procesador de alta gama para un rendimiento excepcional." },
-    { id: 2, idObjeto: "containerRam", name: "Tarjeta RAM 16GB", price: 80, image: "img/ram.png", description: "Memoria RAM de 16GB para multitarea fluida." },
-    { id: 3, idObjeto: "containerFuente", name: "Fuente de Alimentación 750W", price: 100, image: "img/FuenteAlimentacion.png", description: "Fuente de alimentación potente y eficiente." },
-    { id: 4, idObjeto: "containerDiscoD", name: "Disco Duro SSD 1TB", price: 150, image: "img/discoD.png", description: "Almacenamiento rápido y confiable de 1TB." },
-    { id: 5, idObjeto: "containerGrafica", name: "Tarjeta Gráfica RTX 3060", price: 400, image: "img/grafica.png", description: "Tarjeta gráfica de última generación para juegos y diseño." }
+    { id: 1, idObjeto: "containerProcesador", name: "Procesador Intel i7", price: 300, image: "/img/procesador.png", description: "Procesador de alta gama para un rendimiento excepcional." },
+    { id: 2, idObjeto: "containerRam", name: "Tarjeta RAM 16GB", price: 80, image: "/img/ram.png", description: "Memoria RAM de 16GB para multitarea fluida." },
+    { id: 3, idObjeto: "containerFuente", name: "Fuente de Alimentación 750W", price: 100, image: "/img/FuenteAlimentacion.png", description: "Fuente de alimentación potente y eficiente." },
+    { id: 4, idObjeto: "containerDiscoD", name: "Disco Duro SSD 1TB", price: 150, image: "/img/discoD.png", description: "Almacenamiento rápido y confiable de 1TB." },
+    { id: 5, idObjeto: "containerGrafica", name: "Tarjeta Gráfica RTX 3060", price: 400, image: "/img/grafica.png", description: "Tarjeta gráfica de última generación para juegos y diseño." }
 ];
 
 let cart = [];
