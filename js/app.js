@@ -2,9 +2,15 @@ import * as THREE from 'http://cdn.skypack.dev/three@0.129.0/build/three.module.
 import { GLTFLoader } from 'http://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'http://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js';
 
-// Configuración para el modelo (Ryzen4001.glb)
-const camera1 = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera1.position.set(0, 30, 0);
+// Esperar a que el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    setupScene();
+});
+
+function setupScene() {
+    // Configuración para el modelo (Ryzen4001.glb)
+    const camera1 = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera1.position.set(0, 30, 0);
 
 const scene1 = new THREE.Scene();
 const backgroundTexture1 = new THREE.TextureLoader().load('/img/FondoObjetos.avif');
@@ -288,25 +294,29 @@ const reRender3D5 = () => {
 }
 reRender3D5();
 
-// Ajuste de tamaño al redimensionar la ventana
-window.addEventListener('resize', () => {
-    camera1.aspect = window.innerWidth / window.innerHeight;
-    camera1.updateProjectionMatrix();
-    renderer1.setSize(window.innerWidth / 2, window.innerHeight);
+    // Ajuste de tamaño al redimensionar la ventana
+    window.addEventListener('resize', () => {
+        camera1.aspect = window.innerWidth / window.innerHeight;
+        camera1.updateProjectionMatrix();
+        renderer1.setSize(window.innerWidth / 2, window.innerHeight);
 
-    camera2.aspect = window.innerWidth / window.innerHeight;
-    camera2.updateProjectionMatrix();
-    renderer2.setSize(window.innerWidth / 2, window.innerHeight);
+        camera2.aspect = window.innerWidth / window.innerHeight;
+        camera2.updateProjectionMatrix();
+        renderer2.setSize(window.innerWidth / 2, window.innerHeight);
 
-    camera3.aspect = window.innerWidth / window.innerHeight;
-    camera3.updateProjectionMatrix();
-    renderer3.setSize(window.innerWidth / 2, window.innerHeight);
+        camera3.aspect = window.innerWidth / window.innerHeight;
+        camera3.updateProjectionMatrix();
+        renderer3.setSize(window.innerWidth / 2, window.innerHeight);
 
-    camera4.aspect = window.innerWidth / window.innerHeight;
-    camera4.updateProjectionMatrix();
-    renderer4.setSize(window.innerWidth / 2, window.innerHeight);
+        camera4.aspect = window.innerWidth / window.innerHeight;
+        camera4.updateProjectionMatrix();
+        renderer4.setSize(window.innerWidth / 2, window.innerHeight);
 
-    camera5.aspect = window.innerWidth / window.innerHeight;
-    camera5.updateProjectionMatrix();
-    renderer5.setSize(window.innerWidth / 2, window.innerHeight);
-});
+        camera5.aspect = window.innerWidth / window.innerHeight;
+        camera5.updateProjectionMatrix();
+        renderer5.setSize(window.innerWidth / 2, window.innerHeight);
+    });
+    
+    // Disparar evento cuando Three.js está listo
+    document.dispatchEvent(new Event('threejsReady'));
+}

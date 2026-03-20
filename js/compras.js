@@ -85,4 +85,17 @@ document.getElementById('checkout').addEventListener('click', () => {
 });
 
 // Cargar los productos al iniciar la página
-loadProducts();
+document.addEventListener('threejsReady', () => {
+    loadProducts();
+});
+
+// Si no está en página de productos (index.html), cargar inmediatamente
+if (!document.getElementById('product-menu')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (document.getElementById('product-menu')) {
+            loadProducts();
+        }
+    });
+} else {
+    loadProducts();
+}
