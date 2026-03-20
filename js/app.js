@@ -4,7 +4,8 @@ import { OrbitControls } from 'https://cdn.skypack.dev/three@0.129.0/examples/js
 
 // Esperar a que el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
-    setupScene();
+    // Pequeño delay para asegurar que compras.js haya creado los contenedores
+    setTimeout(setupScene, 100);
 });
 
 function setupScene() {
