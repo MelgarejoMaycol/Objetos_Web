@@ -1,6 +1,6 @@
-import * as THREE from 'http://cdn.skypack.dev/three@0.129.0/build/three.module.js';
-import { GLTFLoader } from 'http://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'http://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js';
+import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
+import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js';
 
 // Esperar a que el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
