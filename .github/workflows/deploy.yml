@@ -2,48 +2,51 @@ name: Deploy to Vercel
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Install dependencies
-      run: npm install
-      continue-on-error: true
-    
-    - name: Verify HTML files
-      run: |
-        echo "Checking HTML files..."
-        test -f index.html && echo "✓ index.html found"
-        test -f carrito.html && echo "✓ carrito.html found"
-        test -f servicios.html && echo "✓ servicios.html found"
-        test -f horarios.html && echo "✓ horarios.html found"
-    
-    - name: Verify CSS files
-      run: |
-        echo "Checking CSS files..."
-        test -f css/style.css && echo "✓ style.css found"
-        test -f css/carrito.css && echo "✓ carrito.css found"
-    
-    - name: Verify JavaScript files
-      run: |
-        echo "Checking JavaScript files..."
-        test -f js/app.js && echo "✓ app.js found"
-        test -f js/compras.js && echo "✓ compras.js found"
-    
-    - name: Deploy to Vercel
-      uses: vercel/action@v6
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-      continue-on-error: true
-    
-    - name: Deployment Status
-      run: echo "✓ Deployment workflow completed successfully"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify project files
+        run: |
+          echo "Verifying HTML files..."
+          test -f index.html && echo "✓ index.html found" || echo "✗ index.html NOT found"
+          test -f carrito.html && echo "✓ carrito.html found" || echo "✗ carrito.html NOT found"
+          test -f servicios.html && echo "✓ servicios.html found" || echo "✗ servicios.html NOT found"
+          test -f horarios.html && echo "✓ horarios.html found" || echo "✗ horarios.html NOT found"
+          
+          echo ""
+          echo "Verifying CSS files..."
+          test -f css/style.css && echo "✓ style.css found" || echo "✗ style.css NOT found"
+          test -f css/carrito.css && echo "✓ carrito.css found" || echo "✗ carrito.css NOT found"
+          
+          echo ""
+          echo "Verifying JavaScript files..."
+          test -f js/app.js && echo "✓ app.js found" || echo "✗ app.js NOT found"
+          test -f js/compras.js && echo "✓ compras.js found" || echo "✗ compras.js NOT found"
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+        env:
+          VERCEL_ENV: production
+
+      - name: Success notification
+        if: success()
+        run: echo "✓ Deployment to Vercel completed successfully!"
+
+      - name: Failure notification
+        if: failure()
+        run: echo "✗ Deployment failed. Check logs above for details."
