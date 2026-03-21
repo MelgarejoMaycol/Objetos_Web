@@ -31,7 +31,7 @@
         }
 
         .imgLogo {
-            width: 150px;
+            width: 100px;
             height: auto;
             object-fit: contain;
             margin: 0;
@@ -282,7 +282,7 @@
             }
 
             .imgLogo {
-                width: 120px;
+                width: 90px;
                 height: auto;
             }
 
@@ -406,7 +406,7 @@
             }
 
             .imgLogo {
-                width: 140px;
+                width: 110px;
             }
 
             .nav-link {
