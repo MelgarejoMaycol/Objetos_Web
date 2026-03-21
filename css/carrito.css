@@ -4,7 +4,7 @@
                 sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
+            background-color: #111111;
         }
 
         /* ========== MENÚ PRINCIPAL ========== */
@@ -16,7 +16,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 15px 20px;
-            background-color: black;
+            background-color: #1a1a1a;
             border-bottom: 1px solid #333;
             gap: 20px;
             width: 100%;
@@ -122,17 +122,20 @@
         }
 
         .product-item {
-            border: 1px solid #ddd;
+            border: 1px solid #222;
             border-radius: 8px;
             padding: 15px;
             width: calc(25% - 20px);
             cursor: pointer;
-            transition: box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             color: #fefefe;
+            background-color: rgba(0, 0, 0, 0.2);
         }
 
         .product-item:hover {
-            box-shadow: 0 0 10px rgb(255, 255, 255);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+            border: 1px solid #0a7f7f;
+            background-color: rgba(0, 0, 0, 0.3);
         }
 
         .product-item img {
@@ -181,7 +184,7 @@
         /* Estilos para el icono del carrito */
         #cart-icon {
             position: fixed;
-            top: 20px;
+            bottom: 20px;
             right: 20px;
             font-size: 24px;
             cursor: pointer;
@@ -211,7 +214,7 @@
         #cart-dropdown {
             display: none;
             position: fixed;
-            top: 80px;
+            bottom: 90px;
             right: 20px;
             background: white;
             padding: 20px;
@@ -342,14 +345,14 @@
                 width: 45px;
                 height: 45px;
                 font-size: 20px;
-                top: 10px;
+                bottom: 10px;
                 right: 10px;
             }
 
             #cart-dropdown {
                 width: calc(100% - 40px);
                 right: 20px;
-                top: 65px;
+                bottom: 65px;
                 max-width: 280px;
             }
 

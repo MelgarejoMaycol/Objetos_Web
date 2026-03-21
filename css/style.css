@@ -5,7 +5,7 @@
 
 /* Fondo negro para toda la página */
 body {
-    background-color: black;
+    background-color: #111111;
 }
 
 /* ===========================
@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 15px 20px;
-    background-color: black;
+    background-color: #1a1a1a;
     border-bottom: 1px solid #333;
     gap: 20px;
     width: 100%;

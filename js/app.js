@@ -101,7 +101,7 @@ function setupScene() {
     }
 
     // Crear todas las escenas
-    createScene('containerProcesador', '/objetos/Ryzen4001.glb', [0, 0, 0], [6, 6, 6], [5, 1, 1], [0, 30, 0]);
+    createScene('containerProcesador', '/objetos/Ryzen4001.glb', [0, 0, 0], [6, 6, 6], [0, 2.4, 0], [0, 30, 0]);
     createScene('containerRam', '/objetos/ram.glb', [0, 0, 0], [0.7, 0.7, 0.7], [0, 2.4, 0], [0, 6, 20]);
     createScene('containerFuente', '/objetos/CorsairCV750.glb', [0, 2, 0], [0.6, 0.6, 0.6], [1, 0, 0], [0, 5, 20]);
     createScene('containerDiscoD', '/objetos/Almacenamiento1.glb', [0, 0, -5], [0.5, 0.5, 0.5], [1, 0, 0], [0, 5, 20]);

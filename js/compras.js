@@ -19,7 +19,7 @@ function loadProducts() {
             <p>${product.description}</p>
             <p>Precio: $${product.price}</p>
             <div>
-                <button onclick="addToCart(${product.id})" class="boton">Añadir al Carrito</button>
+                <button onclick="addToCart(${product.id})" class="boton">Añadir</button>
             </div>
         </div>
     `).join('');
