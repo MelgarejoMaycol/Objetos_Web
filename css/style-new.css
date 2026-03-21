@@ -1,42 +1,59 @@
-/* ===========================
-   IMPORTACIONES Y ESTILOS GLOBALES
-   =========================== */
+/* ====================================================
+   COMPU3D EXPLORER - CSS RESPONSIVO
+   Estilos para Desktop, Tablet y Mobile
+   ==================================================== */
+
+/* ========== IMPORTACIONES Y CONFIGURACIÓN GLOBAL ========== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap');
 
-/* Fondo negro para toda la página */
+/* Fondo global negro */
 body {
     background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* ===========================
-   MENÚ PRINCIPAL
-   =========================== */
+/* ========== MENÚ PRINCIPAL RESPONSIVO ========== */
+
+/* Contenedor del menú principal */
+.menu1 {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
 
 /* Logo de la empresa */
 .imgLogo {
     margin-left: 20%;
     margin-top: 10%;
     width: 30%;
+    display: block;
+    object-fit: contain;
 }
 
-.menu1 {
-    padding: 0 15px;
-}
-
+/* Sección de links del menú */
 .menu2 {
     padding-right: 20px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
+/* Estilos de los links del menú */
 .menu2 a {
     padding: 10px 20px;
-    color:antiquewhite;
-    font-weight:100 ;
+    color: antiquewhite;
+    font-weight: 100;
     border: none;
     cursor: pointer;
     margin-top: 35px;
     font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .menu2 a:hover {
@@ -50,72 +67,89 @@ body {
     color: black;
 }
 
-.menu2 .link1 {
-    padding-left: 5px;
-}
-
-.menu2 .link2 {
-    padding-left: 5px;
-}
-
+.menu2 .link1,
+.menu2 .link2,
 .menu2 .link3 {
     padding-left: 5px;
 }
 
+/* Sección de redes sociales del menú */
 .menu3 {
     display: flex;
+    align-items: center;
 }
 
-.menu3 .button .img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    
-}
 .menu3 .button-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100%;
+    gap: 10px;
     padding-right: 30%;
     margin-top: 35px;
 }
 
-.menu3 button:hover {
-    background-color: rgba(160, 230, 230, 0.812);
-}
-.you{
-   margin-top: 10px;
-   width: 30px;
-}
-.in{
-    width: 30px;
-}
-.fa{
-    width: 30px; 
-}
+/* Botones de redes sociales */
 .menu3 button {
     border-radius: 50%;
-    overflow: hidden; /* Oculta partes de la imagen que sobresalgan */
+    overflow: hidden;
     border: 2px solid aqua;
     background-color: transparent;
     width: 50px;
     height: 50px;
-    object-position: top center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu3 button:hover {
+    background-color: rgba(160, 230, 230, 0.812);
 }
 
 .menu3 button:first-child {
     margin-left: 0;
 }
 
-/* CARUSEL */
-#productCarousel {
-    height: 100vh;
+/* Imágenes dentro de los botones de redes sociales */
+.you, .in, .fa {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
+.you {
+    margin-top: 10px;
+}
+
+/* ========== CARRUSEL PRINCIPAL ========== */
+
+/* Contenedor del carrusel */
+#productCarousel {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Elemento individual del carrusel */
 .carousel-item {
     height: 100vh;
     min-height: 300px;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+}
+
+/* Contenido del carrusel (texto e imagen) */
+.carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Sección de texto del carrusel */
+.carousel-text {
+    flex: 1;
+    padding: 20px;
 }
 
 .carousel-caption {
@@ -124,43 +158,49 @@ body {
     text-align: left;
 }
 
-.carousel-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    flex-direction: row;
-}
-
-
-
+/* Título del producto en el carrusel */
 .product-title {
     font-size: 4rem;
     font-weight: 900;
-
+    color: antiquewhite;
+    margin: 0;
 }
 
+.carousel-text p {
+    color: gray;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Botones del carrusel */
 .btn-custom {
     border: 2px solid aqua;
     color: #ffffff;
     background-color: transparent;
     margin-right: 10px;
     margin-top: 20px;
-    border-radius: 10cap;
+    border-radius: 10px;
     font-weight: 700;
-  
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .btn-custom:hover {
-    background-color:aqua;
+    background-color: aqua;
     color: #000;
+    text-decoration: none;
 }
 
+/* Contenedor de la imagen del producto */
 .product-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
+    height: 500px;
+    padding: 20px;
 }
 
 .product-image {
@@ -169,11 +209,12 @@ body {
     object-fit: contain;
 }
 
-.carousel-text {
-    flex: 1;
-    padding: 20px;
+.textoCarrusel {
+    position: relative;
+    top: -140px;
 }
 
+/* Controles del carrusel */
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%;
@@ -182,36 +223,39 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: transparent;
-    
     border-radius: 50%;
     width: 40px;
     height: 40px;
 }
 
-.textoCarrusel{
-    position: relative;
-    top: -140px;
-}
-/* MODULO2 */
-.img2modulo{
+/* ========== SECCIÓN DE INFORMACIÓN ========== */
+
+/* Contenedor de información con imagen */
+.img2modulo {
     padding-left: 100px;
     width: 120%;
     height: 100%;
+    object-fit: contain;
 }
-.info{
+
+/* Sección de texto de información */
+.info {
     padding-left: 150px;
 }
-.info h4{
+
+.info h4 {
     font-size: 400%;
     font-weight: 900;
     color: antiquewhite;
 }
-.info p{
+
+.info p {
     margin-top: 2rem;
     font-weight: 600;
     color: gray;
 }
-.btn-2{
+
+.btn-2 {
     display: inline-block;
     padding: 10px 70px;
     background-color: aqua;
@@ -219,30 +263,45 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     border-radius: 50px;
-}
-.btn-2:hover{
-    background-color: aqua;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* HORARIO */
-.datos{
-    margin-top: 50px;
+.btn-2:hover {
+    background-color: #00cccc;
+    text-decoration: none;
 }
-.datos h2{
+
+/* ========== SECCIÓN DE HORARIO ========== */
+
+/* Contenedor de horarios */
+.datos {
+    margin-top: 50px;
+    padding: 30px 0;
+}
+
+.datos h2 {
     font-weight: 900;
     color: antiquewhite;
     font-size: 400%;
 }
-.datos h4{
+
+.datos h4 {
     color: aqua;
+    font-size: 1.2rem;
 }
 
-.datos .txt{
+/* Celdas individuales de información */
+.datos .txt {
     margin-top: 20px;
     margin-left: 50px;
     color: gray;
+    font-size: 1rem;
 }
-/* MAPA */
+
+/* ========== MAPA ========== */
+
 .maps {
     margin-top: 60px;
     width: 100vw;
@@ -253,25 +312,50 @@ body {
 
 .map {
     width: 100%;
-    height: 300px; /* O ajusta según tus necesidades */
+    height: 300px;
     display: block;
     filter: grayscale(100%) invert(93%) contrast(93%);
-
 }
+
+/* ========== SEPARADORES ========== */
+
 .separator {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.686), rgb(255, 255, 255), rgba(0, 0, 0, 0));
-    
 }
-/* TOP DE LA SEMANA */
 
+/* ========== TOP DE LA SEMANA ========== */
+
+.top {
+    color: antiquewhite;
+    padding-left: 50px;
+    margin-top: 50px;
+}
+
+.top h2 {
+    font-weight: 900;
+    font-size: 400%;
+    margin-bottom: 30px;
+}
+
+.top div {
+    margin-bottom: 25px;
+}
+
+.top p {
+    color: gray;
+    margin: 10px 0;
+}
+
+/* Barra de progreso */
 .progress {
     background-color: #333;
     border-radius: 5px;
     height: 20px;
     overflow: hidden;
 }
+
 .progress-bar {
     width: 20%;
     height: 100%;
@@ -279,6 +363,7 @@ body {
     position: relative;
     overflow: hidden;
 }
+
 .progress-bar::before {
     content: '';
     position: absolute;
@@ -299,6 +384,7 @@ body {
     background-size: 30px 30px;
     animation: move 2s linear infinite;
 }
+
 @keyframes move {
     0% {
         background-position: 0 0;
@@ -308,38 +394,56 @@ body {
     }
 }
 
-.top {
-    color: antiquewhite;
-    padding-left: 50px;
-}
+/* ====================================================
+   DISEÑO RESPONSIVO - MEDIA QUERIES
+   ==================================================== */
 
-/* RESPONSIVE DESIGN - Mobile */
+/* MOBILE - Pantallas menores a 768px */
 @media (max-width: 767px) {
+    /* Contenedor fluido */
+    .menu1 {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Logo más pequeño en móvil */
     .imgLogo {
-        margin-left: 10%;
-        margin-top: 5%;
-        width: 80%;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
     }
 
-    .menu1, .menu2, .menu3 {
-        flex-wrap: wrap;
-    }
-
+    /* Menú de links en una columna */
     .menu2 {
         padding-right: 0;
+        padding-top: 10px;
+        width: 100%;
         flex-direction: column;
+        gap: 5px;
     }
 
     .menu2 a {
         padding: 8px 15px;
         font-size: 14px;
-        margin-top: 10px;
+        margin-top: 0;
+        display: block;
+        text-align: center;
+    }
+
+    /* Redes sociales centradas */
+    .menu3 {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
     }
 
     .menu3 .button-container {
         padding-right: 0;
         justify-content: center;
         margin-top: 10px;
+        gap: 15px;
     }
 
     .menu3 button {
@@ -349,41 +453,63 @@ body {
 
     .you, .in, .fa {
         width: 25px;
+        height: 25px;
+    }
+
+    /* Carrusel adaptado para móvil */
+    #productCarousel {
+        height: auto;
     }
 
     .carousel-item {
         height: auto;
         min-height: 400px;
+        flex-direction: column;
     }
 
     .carousel-content {
         flex-direction: column;
         padding: 20px;
+        gap: 10px;
     }
 
+    /* Texto más pequeño en móvil */
     .carousel-text {
+        flex: 1;
         padding: 15px;
+        width: 100%;
     }
 
     .product-title {
         font-size: 1.8rem;
+        margin-bottom: 10px;
     }
 
+    .carousel-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Botones más pequeños */
     .btn-custom {
         padding: 8px 15px;
         font-size: 12px;
         margin-right: 5px;
+        margin-top: 10px;
     }
 
     .textoCarrusel {
         top: -40px;
     }
 
+    /* Imagen del producto responsive */
     .product-image-container {
         width: 100%;
         height: 250px;
+        flex: 1;
+        padding: 10px;
     }
 
+    /* Sección de información */
     .img2modulo {
         padding-left: 0;
         width: 100%;
@@ -392,14 +518,17 @@ body {
 
     .info {
         padding-left: 20px;
+        padding-right: 20px;
     }
 
     .info h4 {
         font-size: 1.5rem;
+        margin: 20px 0 10px 0;
     }
 
     .info p {
         font-size: 0.9rem;
+        margin-top: 1rem;
     }
 
     .btn-2 {
@@ -407,13 +536,17 @@ body {
         font-size: 12px;
     }
 
+    /* Horarios en móvil */
+    .datos {
+        padding: 20px;
+    }
+
     .datos h2 {
         font-size: 1.5rem;
-        padding: 0 20px;
     }
 
     .datos h4 {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .datos .txt {
@@ -421,6 +554,7 @@ body {
         font-size: 0.85rem;
     }
 
+    /* Mapa responsivo */
     .maps {
         width: 100vw;
         margin-left: 50%;
@@ -431,8 +565,10 @@ body {
         height: 200px;
     }
 
+    /* Top de la semana */
     .top {
         padding: 20px;
+        padding-left: 20px;
     }
 
     .top h2 {
@@ -442,20 +578,27 @@ body {
     .top div {
         margin-bottom: 15px;
     }
+
+    .top p {
+        font-size: 0.9rem;
+    }
 }
 
-/* Tablet */
+/* TABLET - Pantallas de 768px a 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
+    /* Logo ajustado */
     .imgLogo {
         margin-left: 15%;
         width: 50%;
     }
 
+    /* Menú links */
     .menu2 a {
         padding: 10px 15px;
         font-size: 16px;
     }
 
+    /* Carrusel */
     .carousel-item {
         height: 70vh;
     }
@@ -464,6 +607,12 @@ body {
         font-size: 2.5rem;
     }
 
+    /* Imagen del producto */
+    .product-image-container {
+        height: 400px;
+    }
+
+    /* Información */
     .img2modulo {
         padding-left: 50px;
         width: 100%;
@@ -477,6 +626,7 @@ body {
         font-size: 2rem;
     }
 
+    /* Horarios */
     .datos h2 {
         font-size: 2rem;
     }
@@ -485,6 +635,7 @@ body {
         margin-left: 30px;
     }
 
+    /* Top de la semana */
     .top {
         padding-left: 30px;
     }
@@ -492,4 +643,9 @@ body {
     .top h2 {
         font-size: 2rem;
     }
+}
+
+/* DESKTOP - Pantallas mayores a 1024px */
+@media (min-width: 1025px) {
+    /* Los estilos originales se aplican automáticamente */
 }
