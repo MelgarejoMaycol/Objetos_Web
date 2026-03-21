@@ -17,9 +17,14 @@ function setupScene() {
             return;
         }
 
-        // Obtener tamaño del contenedor
-        const width = container.clientWidth || 400;
-        const height = container.clientHeight || 300;
+        // Obtener tamaño del contenedor con valores por defecto responsivos
+        let width = container.clientWidth || 400;
+        let height = container.clientHeight || 300;
+
+        // Ajustar altura para pantallas móviles
+        if (window.innerWidth < 768) {
+            height = Math.min(height, 250);
+        }
 
         // Crear cámara con aspect ratio correcto
         const camera = new THREE.PerspectiveCamera(65, width / height, 0.1, 1000);

@@ -165,3 +165,129 @@
             margin: 0;
             background-color: #00FFFF;
         }
+
+        /* RESPONSIVE DESIGN - Mobile */
+        @media (max-width: 767px) {
+            .container {
+                padding: 10px;
+            }
+
+            .product-menu {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .product-item {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .product-item h3 {
+                font-size: 1rem;
+            }
+
+            .product-item p {
+                font-size: 0.85rem;
+            }
+
+            #cart-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+                top: 10px;
+                right: 10px;
+            }
+
+            #cart-dropdown {
+                width: calc(100% - 40px);
+                right: 20px;
+                top: 65px;
+                max-width: 280px;
+            }
+
+            #cart-items {
+                max-height: 250px;
+            }
+
+            .objeto {
+                height: 250px;
+                max-height: 300px;
+            }
+
+            .boton {
+                width: 70%;
+                height: 28px;
+                font-size: 0.7rem;
+            }
+
+            .menu1 {
+                padding: 0 10px;
+            }
+
+            .menu2 {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .menu2 a {
+                padding: 5px 10px;
+                font-size: 12px;
+                margin-top: 0;
+            }
+
+            .menu3 .button-container {
+                padding-right: 0;
+                gap: 8px;
+            }
+
+            .menu3 button {
+                width: 35px;
+                height: 35px;
+            }
+
+            .menu3 button img {
+                width: 20px !important;
+            }
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .product-menu {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .product-item {
+                width: 100%;
+            }
+
+            #cart-dropdown {
+                width: 350px;
+            }
+
+            .objeto {
+                height: 350px;
+            }
+
+            .menu2 a {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .boton {
+                width: 60%;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1025px) {
+            .product-menu {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .product-item {
+                width: calc(25% - 20px);
+            }
+        }
