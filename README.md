@@ -130,11 +130,11 @@ VERCEL_PROJECT_ID = [ID de proyecto]
 - **Maycol Melgarejo** - [mfmelgarejo04@gmail.com](mailto:mfmelgarejo04@gmail.com)
 - **Paula Lozano** - [pau2004ortiz@gmail.com](mailto:pau2004ortiz@gmail.com)
 
-**Crear**: 2026  
+**Crear**: 2024
 **Versión**: 1.0.0
 
 ### Licencia
-Este proyecto es académico y fue creado como trabajo universitario. Todos los derechos reservados ©2026.
+Este proyecto es académico y fue creado como trabajo universitario. Todos los derechos reservados ©2024.
 
 ---
 
