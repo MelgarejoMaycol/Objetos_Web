@@ -1,5 +1,7 @@
 # COMPU3D Explorer 🖥️
 
+**Proyecto Académico de Universidad**
+
 Una plataforma interactiva de tienda de componentes de computadora con modelos 3D integrados, construida con Three.js para visualización de productos en tiempo real.
 
 ## 🌐 Sitio Web en Vivo
@@ -231,17 +233,19 @@ git push
 
 ---
 
-## 📜 Licencia
+## 📜 Créditos y Licencia
 
-Este proyecto es propietario de COMPU3D Explorer. Todos los derechos reservados.
+**Este es un proyecto académico de la Universidad**
 
----
+### Autores
+- **Maycol Melgarejo** - [mfmelgarejo04@gmail.com](mailto:mfmelgarejo04@gmail.com)
+- **Paula Lozano** - [pau2004ortiz@gmail.com](mailto:pau2004ortiz@gmail.com)
 
-## 👨‍💻 Desarrollo
+**Crear**: 2026  
+**Versión**: 1.0.0
 
-**Última actualización**: Marzo 2026  
-**Versión**: 1.0.0  
-**Autor**: Equipo COMPU3D Explorer
+### Licencia
+Este proyecto es académico y fue creado como trabajo universitario. Todos los derechos reservados ©2026.
 
 ---
 
