@@ -12,7 +12,24 @@ Alojado en **Vercel** con despliegue automático desde GitHub.
 
 ---
 
-## 📋 Características
+## � Descripción del Proyecto
+
+COMPU3D Explorer es una aplicación web interactiva desarrollada como proyecto académico que simula una tienda especializada en componentes de computadora. Lo que hace especial a este proyecto es la **integración de modelos 3D en tiempo real**, permitiendo a los usuarios explorar visualmente cada componente desde todos los ángulos antes de realizar una compra.
+
+### Objetivo
+Crear una experiencia de compra mejorada mediante la visualización tridimensional de productos, permitiendo que los clientes tomen decisiones más informadas al ver de manera interactiva las características y tamaño real de cada componente.
+
+### Características Clave del Proyecto
+- 🎯 **Visualización 3D Realista**: Cada componente se renderiza en 3D permitiendo rotación y zoom
+- 🛒 **Carrito de Compras Funcional**: Sistema completo de gestión de carrito con cálculo de totales
+- 📱 **100% Responsive**: Adaptado perfectamente a cualquier dispositivo (móvil, tablet, desktop)
+- 🚀 **Rendimiento Optimizado**: Carga rápida y fluida incluso con modelos 3D pesados
+- 🎨 **Diseño Moderno**: Interfaz visual atractiva con colores llamativos y navegación intuitiva
+- 📚 **Múltiples Secciones**: Página de inicio, productos, servicios y información de contacto
+
+---
+
+## �📋 Características
 
 ### ✨ Características Principales
 - **Visualización 3D Interactiva**: Modelos GLB de componentes de computadora renderizados con Three.js
