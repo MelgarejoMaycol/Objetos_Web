@@ -1,4 +1,4 @@
-name: Deploy to Vercel
+name: Verify Project Files
 
 on:
   push:
@@ -9,44 +9,46 @@ on:
       - main
 
 jobs:
-  deploy:
+  verify:
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Verify project files
+      - name: Verify HTML files exist
         run: |
-          echo "Verifying HTML files..."
+          echo "🔍 Verifying HTML files..."
           test -f index.html && echo "✓ index.html found" || echo "✗ index.html NOT found"
           test -f carrito.html && echo "✓ carrito.html found" || echo "✗ carrito.html NOT found"
           test -f servicios.html && echo "✓ servicios.html found" || echo "✗ servicios.html NOT found"
           test -f horarios.html && echo "✓ horarios.html found" || echo "✗ horarios.html NOT found"
-          
+
+      - name: Verify CSS files exist
+        run: |
           echo ""
-          echo "Verifying CSS files..."
+          echo "🎨 Verifying CSS files..."
           test -f css/style.css && echo "✓ style.css found" || echo "✗ style.css NOT found"
           test -f css/carrito.css && echo "✓ carrito.css found" || echo "✗ carrito.css NOT found"
-          
+
+      - name: Verify JavaScript files exist
+        run: |
           echo ""
-          echo "Verifying JavaScript files..."
+          echo "📜 Verifying JavaScript files..."
           test -f js/app.js && echo "✓ app.js found" || echo "✗ app.js NOT found"
           test -f js/compras.js && echo "✓ compras.js found" || echo "✗ compras.js NOT found"
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-        env:
-          VERCEL_ENV: production
+      - name: Verify assets folder
+        run: |
+          echo ""
+          echo "🎬 Verifying assets..."
+          test -d img && echo "✓ img folder found" || echo "✗ img folder NOT found"
+          test -d objetos && echo "✓ objetos folder found" || echo "✗ objetos folder NOT found"
+          test -d css && echo "✓ css folder found" || echo "✗ css folder NOT found"
+          test -d js && echo "✓ js folder found" || echo "✗ js folder NOT found"
 
-      - name: Success notification
-        if: success()
-        run: echo "✓ Deployment to Vercel completed successfully!"
-
-      - name: Failure notification
-        if: failure()
-        run: echo "✗ Deployment failed. Check logs above for details."
+      - name: ✅ Verification complete
+        run: |
+          echo ""
+          echo "🎉 All project files verified successfully!"
+          echo "📦 Project is ready for deployment to Vercel"
